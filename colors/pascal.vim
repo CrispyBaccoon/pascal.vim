@@ -269,6 +269,7 @@ call s:h("TabLine", {"fg": s:comment, "bg": s:bg})
 call s:h("Folded", {"fg": s:comment, "bg": s:bg})
 hi! link TabLineSel       Keyword
 hi! link TabLineFill      TabLine
+hi! link EndOfBuffer      TabLine
 
 " __CursorLine__
 call s:h("CursorLine",    {"bg": s:cursor_line})
