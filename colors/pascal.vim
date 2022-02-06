@@ -21,7 +21,7 @@ endif
 let g:colors_name='plain'
 
 let s:black           = { "gui": "#24252A", "cterm": "0"   }
-let s:medium_gray     = { "gui": "#767676", "cterm": "243" }
+let s:medium_gray     = { "gui": "#373639", "cterm": "243" }
 let s:white           = { "gui": "#F1F1F1", "cterm": "15"  }
 let s:light_black     = { "gui": "#40424b", "cterm": "8"   }
 let s:lighter_black   = { "gui": "#545454", "cterm": "240" }
@@ -46,9 +46,9 @@ let s:light_cyan      = { "gui": "#C2C1FF", "cterm": "14"  }
 let s:dark_green      = { "gui": "#10A778", "cterm": "2"   }
 let s:light_green     = { "gui": "#5FD7A7", "cterm": "10"  }
 " let s:dark_purple     = { "gui": "#523C79", "cterm": "5"   }
-let s:dark_purple      = { "gui": "#A09EF8", "cterm": "14"  }
+let s:dark_purple      = { "gui": "#C2C1FF", "cterm": "14"  }
 " let s:light_purple    = { "gui": "#6855DE", "cterm": "13"  }
-let s:light_purple      = { "gui": "#C2C1FF", "cterm": "14"  }
+let s:light_purple      = { "gui": "#d49df5", "cterm": "14"  }
 let s:light_yellow    = { "gui": "#FFDB9F", "cterm": "11"  }
 let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
 
@@ -360,88 +360,3 @@ call s:h("StatusLine", {"fg": s:comment, "bg": s:bg})
 " hi StatusLineNC cterm=reverse ctermbg=238 ctermfg=233 gui=NONE guibg=#545a71 guifg=#22242e
 " hi StatusLineTermNC cterm=reverse ctermbg=238 ctermfg=233 gui=NONE guibg=#545a71 guifg=#22242e
 
-" Airline
-let s:save_cpo = &cpo
-set cpo&vim
-function! s:build_palette() abort
-  if &background == 'light'
-    let col_base     = ['#8b98b6', '#cad0de', 244, 251]
-    let col_edge     = ['#e8e9ec', '#757ca3', 252, 243]
-    let col_error    = ['#e8e9ec', '#cc517a', 254, 125]
-    let col_gradient = ['#e8e9ec', '#9fa6c0', 252, 247]
-    let col_nc       = ['#8b98b6', '#cad0de', 244, 251]
-    let col_warning  = ['#e8e9ec', '#c57339', 254, 130]
-    let col_insert   = ['#e8e9ec', '#2d539e', 254, 25]
-    let col_replace  = ['#e8e9ec', '#c57339', 254, 130]
-    let col_visual   = ['#e8e9ec', '#668e3d', 254, 64]
-    let col_red      = ['#cc517a', '#e8e9ec', 125, 254]
-  else
-    let col_base     = ['#545a71', '#22242e', 238, 233]
-    let col_edge     = ['#17181b', '#818696', 234, 245]
-    let col_error    = ['#292c37', '#e27878', 234, 203]
-    let col_gradient = ['#6b7189', '#3a3e50', 242, 236]
-    let col_nc       = ['#545a71', '#22242e', 238, 233]
-    let col_warning  = ['#292c37', '#e2a478', 234, 216]
-    let col_insert   = ['#292c37', '#8a84c6', 234, 110]
-    let col_replace  = ['#292c37', '#e2a478', 234, 216]
-    let col_visual   = ['#292c37', '#b4be82', 234, 150]
-    let col_red      = ['#e27878', '#292c37', 203, 234]
-  endif
-
-  let p = {}
-  let p.inactive = airline#themes#generate_color_map(
-        \ col_nc,
-        \ col_nc,
-        \ col_nc)
-  let p.normal = airline#themes#generate_color_map(
-        \ col_edge,
-        \ col_gradient,
-        \ col_base)
-  let p.insert = airline#themes#generate_color_map(
-        \ col_insert,
-        \ col_gradient,
-        \ col_base)
-  let p.replace = airline#themes#generate_color_map(
-        \ col_replace,
-        \ col_gradient,
-        \ col_base)
-  let p.visual = airline#themes#generate_color_map(
-        \ col_visual,
-        \ col_gradient,
-        \ col_base)
-  let p.terminal = airline#themes#generate_color_map(
-        \ col_insert,
-        \ col_gradient,
-        \ col_base)
-
-  " Accents
-  let p.accents = {
-        \   'red': col_red,
-        \ }
-
-  " Error
-  let p.inactive.airline_error = col_error
-  let p.insert.airline_error = col_error
-  let p.normal.airline_error = col_error
-  let p.replace.airline_error = col_error
-  let p.visual.airline_error = col_error
-
-  " Warning
-  let p.inactive.airline_warning = col_warning
-  let p.insert.airline_warning = col_warning
-  let p.normal.airline_warning = col_warning
-  let p.replace.airline_warning = col_warning
-  let p.visual.airline_warning = col_warning
-
-  " Terminal
-  let p.normal.airline_term = col_base
-  let p.terminal.airline_term = col_base
-  let p.visual.airline_term = col_base
-
-  return p
-endfunction
-
-let g:airline#themes#plain#palette = s:build_palette()
-
-let &cpo = s:save_cpo
-unlet s:save_cpo
