@@ -8,7 +8,7 @@ personal taste.
 Minimalistic colorscheme which uses bold to highlight keywords and a
 distinguished color for constant literals (string, numbers, JSX tags).
 
-<!-- TODO #1 Add screenshots -->
+<!-- TODO #1 Add screenshots @CrispyBaccoon -->
 
 ## Installation & Usage
 
