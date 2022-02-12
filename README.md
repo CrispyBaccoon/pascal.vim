@@ -8,6 +8,8 @@ personal taste.
 Minimalistic colorscheme which uses bold to highlight keywords and a
 distinguished color for constant literals (string, numbers, JSX tags).
 
+<!-- TODO #1 Add screenshots -->
+
 ## Installation & Usage
 
 With [vim-plug][] you add this to the `.vimrc`:
@@ -32,4 +34,3 @@ colorscheme plain
 - What font is being used on the screenshots?
 
   I use Fira Code.
-
