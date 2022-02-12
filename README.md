@@ -14,13 +14,13 @@ distinguished color for constant literals (string, numbers, JSX tags).
 
 With [vim-plug][] you add this to the `.vimrc`:
 
-```
+```Vim
 Plug 'crispybaccoon/pascal.vim'
 ```
 
 Then:
 
-```
+```Vim
 set background=light " Set to dark for a dark variant
 colorscheme plain
 ```
