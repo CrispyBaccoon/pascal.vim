@@ -98,6 +98,30 @@ else
   let s:error            = s:dark_red
 endif
 
+if g:pascal_autumn
+  let s:bg               = { "gui": "#24252A", "cterm": "0"   }
+  let s:bg_subtle        = { "gui": "#40424b", "cterm": "8"   }
+  let s:bg_very_subtle   = { "gui": "#303030", "cterm": "236" }
+  let s:norm             = { "gui": "#D3C6AA", "cterm": "251" }
+  let s:norm_subtle      = { "gui": "#999999", "cterm": "249" }
+  let s:norm_very_subtle = { "gui": "#373639", "cterm": "243" }
+  let s:purple           = { "gui": "#d4a1f2", "cterm": "14"  }
+  let s:cyan             = { "gui": "#8ABEB7", "cterm": "14"  }
+  let s:green            = { "gui": "#D9EE88", "cterm": "10"  }
+  let s:red              = { "gui": "#E388A3", "cterm": "1"   }
+  let s:orange           = { "gui": "#FFB79f", "cterm": "1"   }
+  let s:yellow           = { "gui": "#FFDF9B", "cterm": "11"  }
+  let s:visual           = { "gui": "#545454", "cterm": "240" }
+  let s:cursor_line      = { "gui": "#303030", "cterm": "236" }
+  let s:constant         = { "gui": "#E388A3", "cterm": "1"   }
+  let s:comment          = { "gui": "#999999", "cterm": "249" }
+  let s:selection        = { "gui": "#FFDF9B", "cterm": "3"   }
+  let s:selection_fg     = { "gui": "#24252A", "cterm": "0"   }
+  let s:ok               = { "gui": "#5FD7A7", "cterm": "10"  }
+  let s:warning          = { "gui": "#FFDF9B", "cterm": "11"  }
+  let s:error            = { "gui": "#F4B2B1", "cterm": "1"   }
+endif
+
 unlet s:black
 unlet s:medium_gray
 unlet s:white
