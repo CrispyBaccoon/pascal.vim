@@ -48,8 +48,8 @@ let s:light_green     = { "gui": "#5FD7A7", "cterm": "10"  }
 " let s:dark_purple     = { "gui": "#523C79", "cterm": "5"   }
 let s:dark_purple      = { "gui": "#C2C1FF", "cterm": "14"  }
 " let s:light_purple    = { "gui": "#6855DE", "cterm": "13"  }
-let s:light_purple      = { "gui": "#d49df5", "cterm": "14"  }
-let s:light_yellow    = { "gui": "#FFDB9F", "cterm": "11"  }
+let s:light_purple      = { "gui": "#d4a1f2", "cterm": "14"  }
+let s:light_yellow    = { "gui": "#f4dbb3", "cterm": "11"  }
 let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
 
 if &background == "dark"
