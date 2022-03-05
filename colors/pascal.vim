@@ -340,6 +340,10 @@ hi link vimFuncName Variable
 hi link vimUserFunc vimFuncName
 hi link vimOper vimHighlight
 
+hi link dosiniHeader Statement
+hi link dosiniLabel Constant
+hi link dosiniValue Variable
+
 hi link yamlBlockMappingKey Statement
 hi link pythonOperator Statement
 
