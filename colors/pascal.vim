@@ -182,12 +182,15 @@ call s:h("Comment",       {"fg": s:comment})
 call s:h("Constant",      {"fg": s:constant})
 hi! link Character        Constant
 hi! link Number           Constant
-hi! link Boolean          Constant
 " hi! link Float            Constant
 call s:h("Float",         {"bg": s:bg_subtle})
 hi! link String           Constant
 hi! link Directory        Constant
 hi! link Title            Constant
+" }}}
+
+" Boolean {{{
+call s:h("Boolean",       {"fg": s:orange})
 " }}}
 
 " Variable {{{
