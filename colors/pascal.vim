@@ -183,7 +183,6 @@ hi! link Character        Constant
 hi! link Number           Constant
 " hi! link Float            Constant
 call s:h("Float",         {"bg": s:bg_subtle})
-hi! link String           Constant
 hi! link Directory        Constant
 hi! link Title            Constant
 " }}}
@@ -194,6 +193,10 @@ call s:h("Boolean",       {"fg": s:orange})
 
 " Variable {{{
 call s:h("Variable",      {"fg": s:orange})
+" }}}
+
+" String {{{
+call s:h("String",        {"fg": s:cyan})
 " }}}
 
 " Statement {{{
