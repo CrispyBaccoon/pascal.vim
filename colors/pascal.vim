@@ -361,6 +361,7 @@ hi link jsFuncName Function
 hi link jsGlobalObjects Normal
 hi link jsGlobalNodeObjects Normal
 hi link jsArrowFunction Noise
+hi link jsVariableDef Variable
 hi link jsStorageClass StorageClass
 hi link StorageClass Statement
 " }}}
