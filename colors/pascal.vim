@@ -203,8 +203,11 @@ hi! link Include          Statement
 hi! link Conditonal       Statement
 hi! link Repeat           Statement
 hi! link Label            Statement
-hi! link Keyword          Statement
 hi! link Exception        Statement
+" }}}
+
+" Keyword {{{
+call s:h("Keyword",       {"fg": s:red})
 " }}}
 
 " ErrorMsg {{{
@@ -347,7 +350,7 @@ hi link GitGutterChangeDelete       LineNr
 " Javascript {{{
 hi link jsFlowTypeKeyword Statement
 hi link jsFlowImportType Statement
-hi link jsFunction Statement
+hi link jsFunction Keyword
 hi link jsGlobalObjects Normal
 hi link jsGlobalNodeObjects Normal
 hi link jsArrowFunction Noise
