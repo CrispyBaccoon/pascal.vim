@@ -362,7 +362,6 @@ hi link xmlAttrib xmlTag
 call s:h("markdownH1",    {"fg": s:red, "gui": "bold"})
 call s:h("markdownH2",    {"fg": s:yellow, "gui": "bold"})
 call s:h("markdownH3",    {"fg": s:purple, "gui": "bold"})
-call s:h("Comment",       {"fg": s:comment, "gui": "italic"})
 " hi link markdownH1 Statement
 " hi link markdownH2 Statement
 " hi link markdownH3 Statement
