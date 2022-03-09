@@ -210,6 +210,10 @@ hi! link Exception        Statement
 call s:h("Keyword",       {"fg": s:red})
 " }}}
 
+" Function {{{
+call s:h("Function",      {"fg": s:green})
+" }}}
+
 " ErrorMsg {{{
 call s:h("ErrorMsg",      {"fg": s:error})
 hi! link Error            ErrorMsg
