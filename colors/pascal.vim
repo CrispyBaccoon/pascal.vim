@@ -354,6 +354,7 @@ hi link GitGutterChangeDelete       LineNr
 hi link jsFlowTypeKeyword Statement
 hi link jsFlowImportType Statement
 hi link jsFunction Keyword
+hi link jsFuncName Function
 hi link jsGlobalObjects Normal
 hi link jsGlobalNodeObjects Normal
 hi link jsArrowFunction Noise
