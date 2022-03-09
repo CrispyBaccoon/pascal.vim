@@ -147,7 +147,6 @@ else
     let g:hasgui = 'false'
 endif
 hi! link Identifier       Normal
-hi! link Function         Identifier
 hi! link Type             Normal
 hi! link StorageClass     Type
 hi! link Structure        Type
