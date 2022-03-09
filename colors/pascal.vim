@@ -136,7 +136,7 @@ function! s:h(group, style)
     \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
 endfunction
 
-" __Normal__
+" Normal {{{
 if has("gui")
     call s:h("Normal",    {"fg": s:norm, "bg": s:bg})
     call s:h("Cursor",    {"fg": s:bg, "bg": s:norm})
@@ -163,19 +163,22 @@ hi! link PreProc          Normal
 hi! link Define           PreProc
 hi! link Macro            PreProc
 hi! link PreCondit        PreProc
+" }}}
 
-" __Operator__
+" Operator {{{
 call s:h("Noise",         {"fg": s:norm_subtle, "gui": "NONE"})
 hi! link Operator         Statement
 hi! link LineNr           Noise
 hi! link CursorLineNr     LineNr
 hi! link FoldColumn       TabLine
 hi! link SignColumn       LineNr
+" }}}
 
-" __Comment__
+" Comment {{{
 call s:h("Comment",       {"fg": s:comment, "gui": "italic"})
+" }}}
 
-" __Constant__
+" Constant {{{
 call s:h("Constant",      {"fg": s:constant})
 hi! link Character        Constant
 hi! link Number           Constant
@@ -185,11 +188,13 @@ call s:h("Float",         {"bg": s:bg_subtle})
 hi! link String           Constant
 hi! link Directory        Constant
 hi! link Title            Constant
+" }}}
 
-" __Variable__
+" Variable {{{
 call s:h("Variable",      {"fg": s:orange})
+" }}}
 
-" __Statement__
+" Statement {{{
 call s:h("Statement",     {"fg": s:purple, "gui": "bold"})
 hi! link Include          Statement
 hi! link Conditonal       Statement
@@ -197,41 +202,56 @@ hi! link Repeat           Statement
 hi! link Label            Statement
 hi! link Keyword          Statement
 hi! link Exception        Statement
+" }}}
 
-" __ErrorMsg__
+" ErrorMsg {{{
 call s:h("ErrorMsg",      {"fg": s:error})
 hi! link Error            ErrorMsg
 hi! link Question         ErrorMsg
-" __WarningMsg__
+" }}}
+" WarningMsg {{{
 call s:h("WarningMsg",    {"fg": s:warning})
-" __MoreMsg__
+" }}}
+" MoreMsg {{{
 call s:h("MoreMsg",       {"fg": s:norm_subtle, "cterm": "bold", "gui": "bold"})
 hi! link ModeMsg          MoreMsg
+" }}}
 
-" __NonText__
+" NonText {{{
 call s:h("NonText",       {"fg": s:norm_very_subtle})
 hi! link qfLineNr         NonText
+" }}}
 
-" __Search__
+" Search {{{
 call s:h("Search",        {"bg": s:selection, "fg": s:selection_fg})
 call s:h("IncSearch",     {"bg": s:selection, "fg": s:selection_fg, "gui": "bold"})
+" }}}
 
-" __Visual__
+" Visual {{{
 call s:h("Visual",        {"bg": s:visual})
-" __VisualNOS__
+" }}}
+" VisualNOS {{{
 call s:h("VisualNOS",     {"bg": s:bg_subtle})
+" }}}
 
+" Ignore {{{
 call s:h("Ignore",        {"fg": s:bg})
+" }}}
 
-" __DiffAdd__
+" DiffAdd {{{
 call s:h("DiffAdd",       {"fg": s:green})
-" __DiffDelete__
+" }}}
+" DiffDelete {{{
 call s:h("DiffDelete",    {"fg": s:red})
-" __DiffChange__
+" }}}
+" DiffChange {{{
 call s:h("DiffChange",    {"fg": s:yellow})
-" __DiffText__
+" }}}
+" DiffText {{{
 call s:h("DiffText",      {"fg": s:constant})
+" }}}
 
+" Spell {{{
 if has("gui_running")
   call s:h("SpellBad",    {"gui": "underline", "sp": s:red})
   call s:h("SpellCap",    {"gui": "underline", "sp": s:ok})
@@ -243,56 +263,75 @@ else
   call s:h("SpellRare",   {"cterm": "underline", "fg": s:error})
   call s:h("SpellLocal",  {"cterm": "underline", "fg": s:ok})
 endif
+" }}}
 
+" helpHyperText {{{
 hi! link helpHyperTextEntry Title
 hi! link helpHyperTextJump  String
+" }}}
 
-" __StatusLine__
+" StatusLine {{{
 call s:h("StatusLine",        {"gui": "underline", "bg": s:bg, "fg": s:norm_very_subtle})
-" __StatusLineNC__
+" }}}
+" StatusLineNC {{{
 call s:h("StatusLineNC",      {"gui": "underline", "bg": s:bg, "fg": s:bg_subtle})
-" __WildMenu__
+" }}}
+" WildMenu {{{
 call s:h("WildMenu",          {"gui": "underline,bold", "bg": s:bg, "fg": s:norm})
+" }}}
 
+" StatuslineMsg {{{
 call s:h("StatusLineOk",      {"gui": "underline", "bg": s:bg, "fg": s:ok})
 call s:h("StatusLineError",   {"gui": "underline", "bg": s:bg, "fg": s:error})
 call s:h("StatusLineWarning", {"gui": "underline", "bg": s:bg, "fg": s:warning})
+" }}}
 
-" __Pmenu__
+" Pmenu {{{
 call s:h("Pmenu",         {"fg": s:norm, "bg": s:cursor_line})
 hi! link Pmenu            TabLine
 hi! link PmenuSbar        Pmenu
 hi! link PmenuThumb       Pmenu
+" }}}
 
-" __PmenuSel__
+" PmenuSel {{{
 call s:h("PmenuSel",      {"fg": s:norm, "bg": s:cursor_line, "gui": "bold"})
+" }}}
 
+" TabLine {{{
 " hi! link TabLine          Normal
 call s:h("TabLine", {"fg": s:comment, "bg": s:bg})
 call s:h("Folded", {"fg": s:comment, "bg": s:bg})
 hi! link TabLineSel       Keyword
 hi! link TabLineFill      TabLine
 hi! link EndOfBuffer      TabLine
+" }}}
 
-" __CursorLine__
+" CursorLine {{{
 call s:h("CursorLine",    {"bg": s:cursor_line})
-" __CursorColumn__
+" }}}
+" CursorColumn {{{
 call s:h("ColorColumn",   {"bg": s:cursor_line})
+" }}}
 
-" __MatchParen__
+" MatchParen {{{
 call s:h("MatchParen",    {"bg": s:bg_subtle, "fg": s:norm})
+" }}}
 
+hi link diffRemoved       DiffDelete
+hi link diffAdded         DiffAdd
+hi link yamlBlockMappingKey Statement
+hi link pythonOperator Statement
+
+" HTML Headers {{{
 hi! link htmlH1 Normal
 hi! link htmlH2 Normal
 hi! link htmlH3 Normal
 hi! link htmlH4 Normal
 hi! link htmlH5 Normal
 hi! link htmlH6 Normal
+" }}}
 
-hi link diffRemoved       DiffDelete
-hi link diffAdded         DiffAdd
-
-" Signify, git-gutter
+" Signify, git-gutter {{{
 hi link SignifySignAdd              LineNr
 hi link SignifySignDelete           LineNr
 hi link SignifySignChange           LineNr
@@ -300,7 +339,9 @@ hi link GitGutterAdd                LineNr
 hi link GitGutterDelete             LineNr
 hi link GitGutterChange             LineNr
 hi link GitGutterChangeDelete       LineNr
+" }}}
 
+" Javascript {{{
 hi link jsFlowTypeKeyword Statement
 hi link jsFlowImportType Statement
 hi link jsFunction Statement
@@ -308,13 +349,16 @@ hi link jsGlobalObjects Normal
 hi link jsGlobalNodeObjects Normal
 hi link jsArrowFunction Noise
 hi link StorageClass Statement
+" }}}
 
+" XML {{{
 hi link xmlTag Constant
 hi link xmlTagName xmlTag
 hi link xmlEndTag xmlTag
 hi link xmlAttrib xmlTag
+" }}}
 
-" Markdown:
+" Markdown {{{
 call s:h("markdownH1",    {"fg": s:red, "gui": "bold"})
 call s:h("markdownH2",    {"fg": s:yellow, "gui": "bold"})
 call s:h("markdownH3",    {"fg": s:purple, "gui": "bold"})
@@ -330,40 +374,48 @@ hi link markdownCode Constant
 hi link markdownCodeBlock Constant
 hi link markdownCodeDelimiter Constant
 hi link markdownHeadingDelimiter Constant
+" }}}
 
-" VimWiki:
+" VimWiki {{{
 hi link VimwikiHeader1 markdownH1
 hi link VimwikiHeader2 markdownH2
 hi link VimwikiHeader3 markdownH3
+" }}}
 
+" Vim {{{
 hi link vimHighlight Statement
 hi link vimVar Variable
 hi link vimLet Statement
 hi link vimFuncName Variable
 hi link vimUserFunc vimFuncName
 hi link vimOper vimHighlight
+" }}}
 
+" Dosini {{{
 hi link dosiniHeader Statement
 hi link dosiniLabel Constant
 hi link dosiniValue Variable
+" }}}
 
-hi link yamlBlockMappingKey Statement
-hi link pythonOperator Statement
-
+" ALE {{{
 hi link ALEWarning WarningMsg
 hi link ALEWarningSign WarningMsg
 hi link ALEError ErrorMsg
 hi link ALEErrorSign ErrorMsg
 hi link ALEInfo InfoMsg
 hi link ALEInfoSign InfoMsg
+" }}}
 
+" SQL {{{
 hi link sqlStatement Statement
 hi link sqlKeyword Keyword
+" }}}
 
-" statusline
+" Statusline {{{
 call s:h("StatusLine", {"fg": s:comment, "bg": s:bg})
 " hi StatusLine cterm=reverse ctermbg=234 ctermfg=245 gui=NONE guibg=#17181b guifg=#818696 term=reverse
 " hi StatusLineTerm cterm=reverse ctermbg=234 ctermfg=245 gui=NONE guibg=#17181b guifg=#818696 term=reverse
 " hi StatusLineNC cterm=reverse ctermbg=238 ctermfg=233 gui=NONE guibg=#545a71 guifg=#22242e
 " hi StatusLineTermNC cterm=reverse ctermbg=238 ctermfg=233 gui=NONE guibg=#545a71 guifg=#22242e
+" }}}
 
