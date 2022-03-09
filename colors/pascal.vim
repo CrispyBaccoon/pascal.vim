@@ -175,7 +175,7 @@ hi! link SignColumn       LineNr
 " }}}
 
 " Comment {{{
-call s:h("Comment",       {"fg": s:comment, "gui": "italic"})
+call s:h("Comment",       {"fg": s:comment})
 " }}}
 
 " Constant {{{
