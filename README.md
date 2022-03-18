@@ -12,7 +12,7 @@ distinguished color for constant literals (string, numbers, JSX tags).
 
 ## Installation & Usage
 
-With [vim-plug][] you add this to the `.vimrc`:
+With [vim-plug](https://github.com/junegunn/vim-plug) you add this to your `.vimrc` / `init.vim`:
 
 ```Vim
 Plug 'crispybaccoon/pascal.vim'
