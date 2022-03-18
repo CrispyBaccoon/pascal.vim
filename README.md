@@ -1,6 +1,6 @@
 # pascal.vim
 
-This is a fork of [vim-colors-plain][] which is being developed based on my
+This is a fork of [vim-colors-plain](https://github.com/andreypopp/vim-colors-plain) which is being developed based on my
 personal taste.
 
 ## Motivation
