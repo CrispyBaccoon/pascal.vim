@@ -25,7 +25,7 @@ set background=dark " Set to light for a light variant
 colorscheme pascal
 ```
 
-## FAQ
+<!-- ## FAQ
 
 - Is this Vim or Neovim on the screenshots and why?
 
@@ -33,4 +33,4 @@ colorscheme pascal
 
 - What font is being used on the screenshots?
 
-  I use Fira Code.
+  I use Fira Code. -->
