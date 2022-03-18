@@ -21,8 +21,8 @@ Plug 'crispybaccoon/pascal.vim'
 Then:
 
 ```Vim
-set background=light " Set to dark for a dark variant
-colorscheme plain
+set background=dark " Set to light for a light variant
+colorscheme pascal
 ```
 
 ## FAQ
