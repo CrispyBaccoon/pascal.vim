@@ -335,12 +335,12 @@ hi link yamlBlockMappingKey Statement
 hi link pythonOperator Statement
 
 " HTML Headers {{{
-hi! link htmlH1 Normal
-hi! link htmlH2 Normal
-hi! link htmlH3 Normal
-hi! link htmlH4 Normal
-hi! link htmlH5 Normal
-hi! link htmlH6 Normal
+hi! link htmlH1 markdownH1
+hi! link htmlH2 markdownH2
+hi! link htmlH3 markdownH3
+hi! link htmlH4 markdownH4
+hi! link htmlH5 markdownH5
+hi! link htmlH6 markdownH6
 " }}}
 
 " Signify, git-gutter {{{
